@@ -127,11 +127,11 @@ h2 + p {
 
 	}
 	25%{
-		color: rgb(187, 150, 255);
+		color: rgb(215, 196, 252);
 
 	}
 	50%{
-		color: aqua;
+		color: rgb(148, 252, 252);
 	}
 	75%{
 		color: yellow;
