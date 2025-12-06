@@ -1,0 +1,304 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+.head {
+	background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-top: 30px;
+	padding-bottom: 100px;
+	color: #fff;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+h2{
+	font-size: 1.5vw; /* 1.5% от viewport */
+}
+p {
+	line-height: 1.65em;
+	font-size: 1vw; /* 1% от viewport */
+}
+.button {
+	background-color: rgb(255, 210, 12);
+	width: 220px;
+	height: 55px;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	display: block;
+	padding: 15px 0px;
+	text-align: center;
+	border-radius: 4px;
+	transition-property: background-color,color;
+	transition-duration: 0.6s, 1.5s;
+	transition-delay: 1s 1s;
+}
+button:hover {
+	background-color: rgb(230, 182, 28);
+	cursor:progress;
+	box-shadow: 0.5px 3px 6px rgb(3, 3, 5);
+	color: white;
+	transform: translate(0px, 1px);
+}
+.moving_pen{
+	transition: all 1.5s;
+	transform-origin: top left;
+}
+.moving_pen:hover{
+
+	transform: rotate(-35deg);
+}
+
+.moving_ballon{
+	animation-name: fly;
+	position: relative;
+	animation-duration: 14s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes fly{
+	0%{
+		top:0px;
+		left:0px;
+	}
+	25%{
+		top:20px;
+		left:35px;
+		
+	}
+	35%{top:25px; left:0}
+	55%{top:10px; left:-15px}
+	75%{top:25px; left:-25px}
+	100% {top:3px; left:0px}
+}
+h2 + p {
+	max-width: 250pt;
+}
+
+.order{
+	width: 100%; height: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.wrapper {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 60px;
+}
+.offer {
+    width: 700px;
+}
+.title {
+	line-height: 45px;
+	margin-bottom: 20px;
+	max-width: 395px;
+}
+#flag {
+      position: relative;
+      cursor: pointer;
+    }
+.title__span {
+	font-size: 48px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	animation-name: flow;
+	animation-duration: 12s;
+	animation-delay: 2s;
+	animation-iteration-count: 6;
+}
+@keyframes flow{
+	0%{
+		color: white;
+
+	}
+	25%{
+		color: rgb(99, 18, 248);
+
+	}
+	50%{
+		color: aqua;
+	}
+	75%{
+		color: yellow;
+	}
+	100%{
+		color:coral
+	}
+}
+.text {
+	max-width: 400px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: 250px;
+	align-items: flex-start;
+	max-width: 100%;
+    margin: 0 auto;
+}
+.main_item{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 300px;
+}
+.animate {
+	font-size: 25px;
+	color: rgb(219, 99, 1);
+	font-weight: 600;
+}
+
+.order1{
+	background:  rgb(228, 236, 238);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 500px;
+    margin: 0 auto;
+	text-align: center;
+	max-width: 100%;
+}
+h2{
+	text-align: center;
+	padding: 30px;
+}
+.form {
+	margin: 60px auto 0 auto;
+	width: 350px;
+}
+.p2{
+	width:100%;
+	height:40px;
+}
+.end{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4096ee+0,459cf9+30,60abf8+48,60abf8+48,4096ee+55,4096ee+55,459cf9+75,60abf8+100 */
+	background: linear-gradient(to bottom,  #4096ee 0%,#459cf9 30%,#60abf8 48%,#60abf8 48%,#4096ee 55%,#4096ee 55%,#459cf9 75%,#60abf8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.phone{
+	margin-top: 20px;
+	width: 480px;	
+}
+ 
+
+@media screen and (max-width: 1200px)  
+
+{ 
+	.container{ 
+		width: 960px; 
+	}
+	.offer{ 
+		width:100%; 
+		margin-top:60px;}
+	.text{ 
+		width: 100%; } 
+
+} 
+
+/* Large devices (desktops, 992px and up)*/ 
+
+@media screen and (max-width: 992px)  
+
+{ 
+	.container{ 
+		width: 720px; 
+	} 
+ 	.wrapper{ 
+		flex-direction: column; 
+	}
+	.offer{ 
+		width:85%; 
+		margin-top:40px;}
+	.text{ 
+		width: 85%; } 
+	.main {
+		height: 750px;
+		display: block;
+	}
+	.main_item{
+		margin: 40px auto;
+	}
+	.phone{
+		display:block;
+		width: 400px;
+		margin: 40px auto; 
+	}
+	.form{ margin: 60px auto 0 auto; 
+		width:70%; 
+	} 
+	.button{
+		width: 70%;
+	}
+	h2{
+	font-size: 1.8vw; /* 13% от viewport */}
+	p {
+	line-height: 1.65em;
+	font-size: 1.3vw; /* 10% от viewport */}
+
+} 
+
+/* Medium devices (tablets, 768px and up)*/ 
+
+@media screen and (max-width: 768px)  
+
+{ .container{ 
+		width: 540px; 
+	}
+	.wrapper{ 
+		flex-direction: column; 
+	} 
+  	.offer{ 
+		width:95%; 
+		margin-top:34px;}
+	.text{ 
+		width: 95%; }
+	.main {
+		height: 1200px;
+		display: block;
+	}
+	.main_item{
+		margin:40px auto;
+	}
+	.phone{
+		display:block;
+		width: 300px;
+		margin: 25px auto; 
+	}
+	.form{ margin: 50px auto 0 auto; 
+		width:100%; 
+	} 
+	.button{
+		width: 80%;
+	}
+	h2{
+	font-size: 5vw; /* 13% от viewport */}
+	p {
+	line-height: 1.65em;
+	font-size: 3vw; /* 10% от viewport */}
+
+} 

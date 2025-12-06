@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style> 
+    input:invalid{
+        border: 2px solid rgb(255, 174, 0);
+    }
+    input:invalid:required{
+        background-image: linear-gradient(to right, white, rgb(250, 248, 214));
+    }
+    input:valid{
+        border: 2px solid #201b2d;
+    }
+ </style>
+ <script defer src="Script.js"></script>
+</head>
+<body>
+        <header id="head" class="head">
+            <div class="container">
+                <img src="logo.png">
+                <div class="wrapper">
+                    <div class="offer">
+                        <h1 class="title">С помощью нас вы сможете создать то, о чем <span class="title__span">желаете!<span></h1>
+                            <p class="text">Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                            <button class="button" style="border: 0ch; " id ="anim" >Узнать больше...</button>
+                    </div>
+                <img src="header-img.png"  class="phone animate__animated animate__jackInTheBox">
+                </div>
+            </div>
+        </header>
+        <div class="container">
+                <h2 class="animate__animated animate__zoomInDown">Что Вам необходимо?</h2>
+            <div class="main">
+                <div class="main_item">
+                    <img src="f3.png"class="moving_pen">
+                    <h2>Первый блок</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                </div>
+                <div class="main_item">
+                    <img src="f4.png" class="moving_ballon">
+                    <h2>Второй блок</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</p>
+                </div>
+                <div class="main_item">
+                    <img src="f5.png" id="flag">
+                    <h2>Третий блок</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p> 
+                </div>
+            </div>
+        </div>
+            <div class="order1">
+                <label for="order"><h2 id ="para">Форма записи на услугу</h2></label>
+                <form class="form">
+                        <p><input class ="p2" id="first" type="text" class="form-control" style="size: 100%;"
+                            onchange="checkName();"  placeholder="Имя" required /></p>
+                        <p><span id="Name_Check"></span></dp>
+                        <p><input class ="p2" id="phone" type="text" class="form-control"
+                           onchange="checkPhone();" placeholder="Телефон в формате +7-XXX-XXX-XXXX" required /></p>
+                        <p><span id="phone_Check"></span></p>
+                        <p><select class ="p2" class="form-control" name="service" id="service" type="text" required>
+                                <option> Мастер-класс</option>
+                                <option> Консультация</option>
+                                <option> Обучение с наставником</option>
+                        </select></p>
+                        <p> <h3>Дата и время:</h3></p>
+                        <p><input class ="p2" class="form-control" id="date" type="date" required /></p> 
+                        <p><input class ="p2" class="form-control" id="time" type="time" required /></p> 
+                            
+                    <button type="submit" class="button" style="width: 100%; height: 55px; display: block; text-align: center; padding: 15px 0px;" value="send" span id="sendOrder" onclick="resulData();">Отправить заказ!</button>
+                </form>
+            </div>
+            <div class="order1">
+                <label for="order"><h2>Форма заказа обратного звонка</h2></label>
+                <form class="form">
+                    <p><input type="text" name="order" id="order" class="order" value="" pattern="^[А-Яа-яЁё]+$" minlength="2" placeholder="Имя" required></p>
+                    <p><input type="text" name="email" id="email" class="order" value=""  pattern="^\S+@\.\S+$" placeholder="Введите свой E-mail" required></p>
+                    <p><input type="tel" name="tel" id="tel" class="order" value="" pattern="[\+]\d{1}[\-]\d{3}[\-]\d{3}[\-]\d{4}" minlength="15" maxlength="15" placeholder="Телефон в формате +7-XXX-XXX-XXXX" required></p>
+                    <p><input type="text" name="topic" id="topic" class="order" value="" pattern="^[А-Яа-яЁё\s]+$" placeholder="Какая тема Вас интересует?" required></p>
+                    <button type="submit" class="button" style="width: 100%; height: 55px; display: block; text-align: center; padding: 15px 0px;" onclick="outputData();">Отправить вопрос!</button>
+                </form>
+            </div>
+            <div class="end">
+                <div class="container">
+                    <h3 style="color: white; padding: 90px; text-align: center;">@Всё на этом сайте  защищено</h3> 
+                </div>
+            </div>
+        </div>
+</body>
+</html>
